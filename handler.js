@@ -887,12 +887,12 @@ export async function handler(chatUpdate) {
                     if (!('premium' in chat)) chat.premium = true
                     if (!('premiumTime' in chat)) chat.premiumTime = false
                     if (!('premnsfw' in chat)) chat.premnsfw = false
-                    if (!('sBye' in chat)) chat.sBye = 'true'
+                    if (!('sBye' in chat)) chat.sBye = true
                     if (!('sDemote' in chat)) chat.sDemote = ''
                     if (!('simi' in chat)) chat.simi = false
-                    if (!('sPromote' in chat)) chat.sPromote = 'true'
+                    if (!('sPromote' in chat)) chat.sPromote = true
                     if (!('stiker' in chat)) chat.stiker = false
-                    if (!('sWelcome' in chat)) chat.sWelcome = 'true'
+                    if (!('sWelcome' in chat)) chat.sWelcome = true
                     if (!('useDocument' in chat)) chat.useDocument = false
                     if (!('viewonce' in chat)) chat.viewonce = false
                     if (!('viewOnce' in chat)) chat.viewOnce = false
@@ -1312,7 +1312,7 @@ export async function participantsUpdate({ id, participants, action }) {
 
   let godbye = 'https://telegra.ph/file/deaf59bc3e5216eaae814.jpg'
   conn.sendButtonImg(id, await(await fetch(action === 'add' ? wel : lea)).buffer(), 'Group Messege', text, action == 'add' ? 'ᴡᴇʟᴄᴏᴍᴇ' : 'sᴀʏᴏɴᴀʀᴀᴀ', action === 'add' ? '.intro' : 'WH MODS BOT', fakes, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'https://www.instagram.com/_ctzhid/',
+    mediaUrl: 'https://www.instagram.com/dddyan.__/',
     mediaType: 2, 
     description: sgc,
     title: "Jᴏɪɴ Sɪɴɪ Cᴜʏ",
