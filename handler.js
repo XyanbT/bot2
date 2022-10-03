@@ -55,9 +55,9 @@ export async function handler(chatUpdate) {
                   if (!('misi' in user)) user.misi = ''
                   if (!('pasangan' in user)) user.pasangan = ''
                   if (!('premium' in user)) user.premium = false
-                  if (!('registered' in user)) user.registered = false
+                  if (!('registered' in user)) user.registered = true
                   if (!('role' in user)) user.role = 'Beginner'
-                  if (!('sewa' in user)) user.sewa = false
+                  if (!('sewa' in user)) user.sewa = 'true'
                   if (!('skill' in user)) user.skill = ''
                   if (!('title' in user)) user.title = ''
     
@@ -873,10 +873,10 @@ export async function handler(chatUpdate) {
                     if (typeof chat !== 'object')
                         global.db.data.chats[m.chat] = {}
                     if (chat) {
-                    if (!('antiDelete' in chat)) chat.antiDelete = false
-                    if (!('antiLink' in chat)) chat.antiLink = false
+                    if (!('antiDelete' in chat)) chat.antiDelete = true
+                    if (!('antiLink' in chat)) chat.antiLink = true
                     if (!('antiSticker' in chat)) chat.antiSticker = false
-                    if (!('antiToxic' in chat)) chat.antiToxic = false
+                    if (!('antiToxic' in chat)) chat.antiToxic = true
                     if (!('detect' in chat)) chat.detect = false
                     if (!('delete' in chat)) chat.delete = true
                     if (!('getmsg' in chat)) chat.getmsg = false
@@ -884,26 +884,26 @@ export async function handler(chatUpdate) {
                     if (!('lastAnime' in chat)) chat.lastAnime = false
                     if (!('latestNews' in chat)) chat.latestNews = false
                     if (!('nsfw' in chat)) chat.nsfw = false
-                    if (!('premium' in chat)) chat.premium = false
+                    if (!('premium' in chat)) chat.premium = true
                     if (!('premiumTime' in chat)) chat.premiumTime = false
                     if (!('premnsfw' in chat)) chat.premnsfw = false
-                    if (!('sBye' in chat)) chat.sBye = ''
+                    if (!('sBye' in chat)) chat.sBye = 'true'
                     if (!('sDemote' in chat)) chat.sDemote = ''
                     if (!('simi' in chat)) chat.simi = false
-                    if (!('sPromote' in chat)) chat.sPromote = ''
+                    if (!('sPromote' in chat)) chat.sPromote = 'true'
                     if (!('stiker' in chat)) chat.stiker = false
-                    if (!('sWelcome' in chat)) chat.sWelcome = ''
+                    if (!('sWelcome' in chat)) chat.sWelcome = 'true'
                     if (!('useDocument' in chat)) chat.useDocument = false
                     if (!('viewonce' in chat)) chat.viewonce = false
                     if (!('viewOnce' in chat)) chat.viewOnce = false
-                    if (!('welcome' in chat)) chat.welcome = false
+                    if (!('welcome' in chat)) chat.welcome = true
                     if (!isNumber(chat.expired)) chat.expired = 0
                 } else
                     global.db.data.chats[m.chat] = {
-                        antiDelete: false,
-                        antiLink: false,
+                        antiDelete: true,
+                        antiLink: true,
                         antiSticker: false,
-                        antiToxic: false,
+                        antiToxic: true,
                         detect: false,
                         delete: true,
                         expired: 0,
@@ -913,34 +913,34 @@ export async function handler(chatUpdate) {
                         latestNews: false,
                         nsfw: false,
                         premium: false,
-                        premiumTime: false,
+                        premiumTime: true,
                         premnsfw: false,
-                        sBye: '',
-                        sDemote: '',
+                        sBye: true,
+                        sDemote: true,
                         simi: false,
                         sPromote: '',
                         stiker: false,
-                        sWelcome: '',
+                        sWelcome: true,
                         useDocument: false,
                         viewOnce: false,
                         viewonce: false,
-                        welcome: false,
+                        welcome: true,
                     }
             let settings = global.db.data.settings[this.user.jid]
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
-                if (!('self' in settings)) settings.self = false
-                if (!('autoread' in settings)) settings.autoread = false
+                if (!('self' in settings)) settings.self = true
+                if (!('autoread' in settings)) settings.autoread = true
                 if (!('restrict' in settings)) settings.restrict = false
-                if (!('jadibot' in settings)) settings.jadibot = false
+                if (!('jadibot' in settings)) settings.jadibot = true
                 if (!('anticall' in settings)) settings.anticall = true
                 if (!('autorestart' in settings)) settings.autorestart = false
                 if (!('status' in settings)) settings.status = 0
                 if (!('restartDB' in settings)) settings.restartDB = 0
             } else global.db.data.settings[this.user.jid] = {
-                self: false,
-                autoread: false,
-                jadibot: false,
+                self: true,
+                autoread: true,
+                jadibot: true,
                 autorestart: false,
                 anticall: true,
                 restartDB: 0,
